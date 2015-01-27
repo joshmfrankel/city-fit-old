@@ -1,0 +1,8 @@
+ ☐ rails new <app_name>
+   Creates a new application
+ ☐ bundle
+   Shortcut for bundle install - installs all gem packages
+ ☐ bundle install --without production
+   All gems installed minus grouped ones in production
+ ☐ bundle update
+   Update all listed gems to make sure the version is up to date
