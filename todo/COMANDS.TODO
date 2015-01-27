@@ -6,3 +6,7 @@
    All gems installed minus grouped ones in production
  ☐ bundle update
    Update all listed gems to make sure the version is up to date
+ ☐ heroku create
+   Create a new project on heroku
+ ☐ git push heroku master
+   push project files live
