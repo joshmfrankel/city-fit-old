@@ -10,3 +10,11 @@
    Create a new project on heroku
  ☐ git push heroku master
    push project files live
+ ☐ rails destroy controller StaticPages home help
+   Destroy all controller files and actions
+ ☐ rake db:migrate
+   Migrate database model changes
+ ☐ rake db:rollback
+   Rollback change to previous version
+ ☐ bundle exec spring binstub --all
+   Springify setup to use spring server

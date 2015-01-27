@@ -13,13 +13,13 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
   gem 'web-console'
-  gem 'spring'
 end
 
 group :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
   gem 'guard-minitest'
+  gem 'spring'
 end
 
 # Heroku gems
