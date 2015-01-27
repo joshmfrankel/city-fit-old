@@ -18,8 +18,10 @@ end
 group :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
+  gem 'libnotify' # Notifications
+  gem 'guard' # Guard to use libnotify properly
   gem 'guard-minitest'
-  gem 'spring'
+  gem 'spring' # spring server
 end
 
 # Heroku gems

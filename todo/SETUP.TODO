@@ -10,6 +10,8 @@ Gemfile:
  ☐ gem 'mini_backtrace'
  ☐ gem 'guard-minitest'
  ☐ gem 'spring'
+ ☐ gem 'guard'
+   Add this to allow for proper libnotify events
 
 Spring:
  ☐ Springify your app
