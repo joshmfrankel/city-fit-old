@@ -26,7 +26,7 @@
 guard :minitest,
   spring: true,
   all_on_start: false,
-  all_after_pass: true do
+  all_after_pass: false do
 
   # with Minitest::Unit
   watch(%r{^test/(.*)\/?test_(.*)\.rb$})
