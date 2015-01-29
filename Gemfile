@@ -15,6 +15,9 @@ gem 'bootstrap-sass'
 # XML parser
 gem 'nokogiri'
 
+# Api
+gem 'indeed-ruby'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
