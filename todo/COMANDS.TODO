@@ -18,3 +18,5 @@
    Rollback change to previous version
  ☐ bundle exec spring binstub --all
    Springify setup to use spring server
+ ☐ rails g controller Pages home about contact
+    Plural for controllers, singular for models

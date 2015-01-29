@@ -30,3 +30,15 @@ Guard:
  ☐ guard init minitest
    guard :minitest, spring: true, all_on_start: false, all_after_pass: true do
 
+API:
+  ☐ Indeed
+        client = Indeed::Client.new Rails.application.secrets.indeed_api
+
+    params = {
+        :q => 'ruby',
+        :l => 'austin',
+        :userip => '1.2.3.4',
+        :useragent => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)',
+    }
+
+    @result = client.search(params)
