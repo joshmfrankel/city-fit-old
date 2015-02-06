@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Admin:
+  name: Josh
+  email: joshmfrankel@gmail.com
+
+User:
+  name: Megan
+  email: meganoed01@gmail.com
+
+Guest:
+  name: Bronco
+  email: bucking.bronco@att.net
