@@ -1,2 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Libraries
+@import "lib/mixins";
+
+// Debugs
+@import "partials/debug"
