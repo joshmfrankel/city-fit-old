@@ -12,7 +12,7 @@ class UserTest < ActiveSupport::TestCase
 
   # Pre-runner
   def setup
-    @user = User.new(name: 'Josh', email: 'joshmfrankel@gmail.com')
+    @user = User.new(name: 'Josh', email: 'joshmfrankel@gmail.com', password: 'foobar', password_confirmation: 'foobar')
   end
 
   # Validations
