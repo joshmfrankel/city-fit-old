@@ -22,3 +22,6 @@
     Plural for controllers, singular for models
  ☐ rails g model User name:string email:string
     create model User with attributes
+ ☐ rails g migration addIndexToUsersEmail
+    migration to be db:migrated
+ ☐ rails g migration addPasswordDigestToUsers password_digest:string

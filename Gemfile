@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Bootstrap
 gem 'bootstrap-sass'
 
+# Has_secure_password
+gem 'bcrypt'
+
 # XML parser
 gem 'nokogiri'
 
