@@ -17,6 +17,8 @@ class UserTest < ActiveSupport::TestCase
 
   # Validations
   test 'should get valid user' do
+    # Had to update this to make uniqueness work
+    @user.email = 'jimbo.jones@gmail.com'
     assert @user.valid?
   end
 
@@ -59,8 +61,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email should be unique' do
-    email = 'joshmfrankel@gmail.com'
-
+    dup_user = @user.dup
+    dup_user.email = @user.email.upcase
+    @user.save
+    assert_not dup_user.valid?
   end
 
 end
