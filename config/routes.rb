@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   # Home
   root 'pages#home'
 
@@ -6,9 +8,14 @@ Rails.application.routes.draw do
   get 'about'   => 'pages#about'
   get 'contact' => 'pages#contact'
 
-    # Users
+  # Users
   get 'signup' => 'users#new'
   resources :users # adds restful routes
+
+  # User Sessions
+  get 'login'    => 'sessions#new'
+  post 'login'   => 'sessions#create'
+  delete 'login' => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

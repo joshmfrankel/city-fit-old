@@ -26,4 +26,16 @@
     migration to be db:migrated
  ☐ rails g migration addPasswordDigestToUsers password_digest:string
  ☐ rails c
+   run console in dev env
+ ☐ rails c test
+   Run console in test env
    User.create(name: "Josh", email: 'joshmfrankel@gmail.com', password: 'Password#1', password_confirmation: 'Password#1')
+ ☐ rails g controller Sessions new
+ ☐ rake db:reset RAILS_ENV=test
+    Drop and re-setup database for the test env
+ ☐ rake routes
+   Show all the current routes
+ ☐ rake test
+   Run all tests
+ ☐ rails g integration_test users_signup
+   Create integration test
