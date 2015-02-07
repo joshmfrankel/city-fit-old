@@ -25,3 +25,5 @@
  ☐ rails g migration addIndexToUsersEmail
     migration to be db:migrated
  ☐ rails g migration addPasswordDigestToUsers password_digest:string
+ ☐ rails c
+   User.create(name: "Josh", email: 'joshmfrankel@gmail.com', password: 'Password#1', password_confirmation: 'Password#1')
