@@ -5,7 +5,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
 
     if user && user.authenticate(params[:session][:password])
-
+      # Log the user in with the sessionHelper
+      log_in user
+      redirect_to user
     else
       # Flash.now is a special variant to be used with render
       # Flash can be reused on redirect
