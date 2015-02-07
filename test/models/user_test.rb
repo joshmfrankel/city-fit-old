@@ -2,14 +2,6 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
-  # A simple fixtures test
-  test "should get admin name josh" do
-
-    # Grab the fixture data
-    user = users(:Admin)
-    assert_equal("Josh", user.name)
-  end
-
   # Pre-runner
   def setup
     @user = User.new(name: 'Josh', email: 'joshmfrankel@gmail.com', password: 'ArealyF#ingWork1ngPassowrd', password_confirmation: 'ArealyF#ingWork1ngPassowrd')
