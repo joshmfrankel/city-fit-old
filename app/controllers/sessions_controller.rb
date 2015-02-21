@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # Log the user in with the sessionHelper
       log_in user
+      remember user
       redirect_to user
     else
       # Flash.now is a special variant to be used with render
@@ -16,7 +17,8 @@ class SessionsController < ApplicationController
     end
   end
   def destroy
-    log_out
+    # only log out if already logged in
+    log_out if logged_in?
     redirect_to root_url
   end
 end

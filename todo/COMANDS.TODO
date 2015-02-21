@@ -39,3 +39,5 @@
    Run all tests
  ☐ rails g integration_test users_signup
    Create integration test
+ ☐ rails g migration addRememberDigestToUsers remeber_digest:string
+   Create new column for the Users table
