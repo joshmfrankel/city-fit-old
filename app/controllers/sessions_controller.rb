@@ -16,8 +16,7 @@ class SessionsController < ApplicationController
     end
   end
   def destroy
-    puts params
-    # @user.destroy
-    # redirect_to root_path
+    log_out
+    redirect_to root_url
   end
 end
