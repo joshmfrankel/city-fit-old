@@ -1,0 +1,21 @@
+Your tests, your code, your documentation
+
+Quote:
+ ☐ Whenever you are tempted to tyope something in to a print statement or a debbuger expression wreite it as a test instead - Martin Fowler
+
+Approach (every test):
+  ☐ Instantiate unit of code
+  ☐ Expected vs actual
+  ☐ Custom error message
+
+OWASP:
+  ☐ Top exploits and hacks for web apps
+
+Essential PHP Security
+
+Github project:
+ ☐ github.com/Telaxus/EPESI
+
+Steps:
+  ☐ Set up phpunit.xml settings for testing
+    ☐ stopOnError=true ; stopOnFailure=true

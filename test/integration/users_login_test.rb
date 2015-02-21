@@ -1,6 +1,28 @@
 require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @user = users(:michael)
+  end
+
+  # Make sure new users are redirected to the proper page
+  test "login with valid information" do
+    get login_path
+    # use the fixture data
+    post login_path, session: { email: @user.email, password: 'password' }
+
+    # Check right redirect target
+    assert_redirected_to @user
+
+    # Then follow the redirect target
+    follow_redirect!
+    assert_template 'users/show'
+    assert_select "a[href=?]", login_path, count: 0
+    assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", user_path(@user)
+  end
+
   test 'flash should only persist for single request' do
     get login_path
     assert_template 'sessions/new'
