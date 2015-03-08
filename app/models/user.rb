@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   VALID_PASSWORD_REGEX = /(?=.*[a-z])(?=.*[\d])(?=.*[\W])(?=.*[A-Z])/
 
   # Virtual Model Attributes from has_secure_password
-  validates :password, presence: true, length: { minimum: 8 }, format: { with: VALID_PASSWORD_REGEX }
+  validates :password, presence: true, length: { minimum: 8 }, format: { with: VALID_PASSWORD_REGEX }, allow_blank: true
 
   # Return the hash digest of the given string
   # Necessary to hash passwords outside the has_secure_password
