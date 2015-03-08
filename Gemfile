@@ -30,7 +30,7 @@ group :test do
   gem 'libnotify',          '0.9.1'  # Notifications
   gem 'guard',              '2.11.1' # Guard to use libnotify properly
   gem 'guard-minitest',     '2.4.3'
-  gem 'spring', '1.2.0' # spring server
+  gem 'spring',             '1.2.0' # spring server
 end
 
 # Heroku gems
