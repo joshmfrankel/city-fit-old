@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       # Log the user in with the sessionHelper
       log_in user
 
+      # Remember me
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
 
       redirect_to user
