@@ -3,3 +3,8 @@ michael:
   name: Michael Example
   email: michael@example.com
   password_digest: <%= User.digest('password') %> # digest the password to be correctly hashed
+
+archer:
+  name: Robin Hood
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %> # digest the password to be correctly hashed

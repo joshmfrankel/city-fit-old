@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   # Call the logged_in_user method before the update and edit action only
   before_action :logged_in_user, only: [:edit, :update]
 
+  # Check for the correct user on the edit and update actions
+  before_action :correct_user, only: [:edit, :update]
+
   def show
     # Find user by route id
     @user = User.find(params[:id])
@@ -26,12 +29,12 @@ class UsersController < ApplicationController
     end
   end
 
+  # @user defined in correct_user filter
   def edit
-    @user = User.find(params[:id])
   end
 
+  # @user defined in correct_user filter
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -47,10 +50,17 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name, :email, :password, :password_confirmation)
       end
 
+      # Confirms a logged-in user.
       def logged_in_user
         unless logged_in?
           flash[:danger] = "Please log in."
           redirect_to login_url
         end
+      end
+
+      # Confirms the correct user.
+      def correct_user
+        @user = User.find(params[:id])
+        redirect_to(root_url) unless current_user?(@user)
       end
 end
