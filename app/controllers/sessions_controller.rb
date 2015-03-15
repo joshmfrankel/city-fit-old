@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       # Remember me
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
 
-      redirect_to user
+      redirect_back_or user
     else
       # Flash.now is a special variant to be used with render
       # Flash can be reused on redirect
