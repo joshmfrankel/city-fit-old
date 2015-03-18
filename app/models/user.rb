@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_many :searches
+
   # Virtual attribute
   attr_accessor :remember_token
 

@@ -1,0 +1,7 @@
+
+
+ ☐ User
+   ☐ has_many searches
+ ☐ Search belongs_to User
+
+ rails g model Search name:text job_title:text location:text user:references
