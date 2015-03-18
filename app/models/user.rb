@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :searches
+  has_many :searches, dependent: :destroy
 
   # Virtual attribute
   attr_accessor :remember_token

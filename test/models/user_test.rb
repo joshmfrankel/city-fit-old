@@ -75,4 +75,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
 
+  test "associated microposts should be destroyed" do
+    @user.save
+    @user.searches.create!(job_title: "Lorem ipsum")
+    assert_difference 'Search.count', -1 do
+      @user.destroy
+    end
+  end
+
 end
